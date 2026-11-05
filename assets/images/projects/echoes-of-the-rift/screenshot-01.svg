@@ -1,0 +1,95 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 900" width="1600" height="900" role="img" aria-labelledby="title">
+  <title id="title">Captura provisional de Echoes of the Rift: pasillo industrial</title>
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#050a0e"/>
+      <stop offset="100%" stop-color="#0a2029"/>
+    </linearGradient>
+    <radialGradient id="riftglow" cx="50%" cy="50%" r="50%">
+      <stop offset="0%" stop-color="#ffcf8f" stop-opacity=".7"/>
+      <stop offset="100%" stop-color="#ff7a3d" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="vignette" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#020406" stop-opacity=".65"/>
+      <stop offset="30%" stop-color="#020406" stop-opacity="0"/>
+      <stop offset="80%" stop-color="#020406" stop-opacity="0"/>
+      <stop offset="100%" stop-color="#020406" stop-opacity=".7"/>
+    </linearGradient>
+    <filter id="blur" x="-60%" y="-60%" width="220%" height="220%">
+      <feGaussianBlur stdDeviation="30"/>
+    </filter>
+  </defs>
+
+  <rect width="1600" height="900" fill="url(#bg)"/>
+
+  <!-- Perspectiva del pasillo -->
+  <g fill="none" stroke="#4d7686" stroke-opacity=".22" stroke-width="2">
+    <path d="M0 0l660 350v180L0 900z"/>
+    <path d="M1600 0l-660 350v180l660 370z"/>
+    <path d="M0 0h1600M0 900h1600"/>
+    <path d="M180 0l560 360M1420 0l-560 360M180 900l560-360M1420 900l-560-360"/>
+    <path d="M0 250h540M0 650h540M1600 250h-540M1600 650h-540"/>
+    <path d="M540 250v400M1060 250v400"/>
+  </g>
+
+  <!-- Paneles -->
+  <g fill="#0a1820" stroke="#234552" stroke-opacity=".5">
+    <path d="M0 250h540v90H0z"/>
+    <path d="M1600 250h-540v90h540z"/>
+    <path d="M0 560h540v90H0z"/>
+    <path d="M1600 560h-540v90h540z"/>
+  </g>
+
+  <!-- Grieta al fondo -->
+  <ellipse cx="800" cy="450" rx="270" ry="320" fill="url(#riftglow)" filter="url(#blur)"/>
+  <path d="M802 160l-24 104 28 62-34 76 26 70-30 86 36 82" fill="none" stroke="#ffcf8f" stroke-width="7" filter="url(#blur)"/>
+  <path d="M802 160l-24 104 28 62-34 76 26 70-30 86 36 82" fill="none" stroke="#fff1d6" stroke-width="2.5"/>
+
+  <!-- Suelo -->
+  <path d="M540 620l-160 280h840l-160-280z" fill="#04090c" stroke="#1f3b46" stroke-width="2"/>
+  <g stroke="#ffb86b" stroke-opacity=".16">
+    <path d="M660 900l80-280M940 900l-80-280M760 900l35-280M840 900l-35-280"/>
+  </g>
+
+  <!-- Cajas -->
+  <g fill="#0b151b" stroke="#2a4a57" stroke-width="2">
+    <path d="M240 620l70-40 70 40v120l-70 40-70-40z"/>
+    <path d="M1270 580l80-46 80 46v140l-80 46-80-46z"/>
+  </g>
+
+  <!-- HUD -->
+  <g font-family="Consolas, monospace" fill="#f4f5fa">
+    <g>
+      <rect x="54" y="50" width="330" height="82" rx="8" fill="#04080b" fill-opacity=".72" stroke="#ffffff" stroke-opacity=".12"/>
+      <text x="76" y="78" font-size="12" letter-spacing="3" fill="#ffb86b">OBJETIVO</text>
+      <text x="76" y="106" font-size="15" letter-spacing="1" fill="#f4f5fa">LLEGA A LA GRIETA</text>
+      <text x="76" y="124" font-size="11" letter-spacing="2" fill="#767e95">SECTOR INDUSTRIAL · B2</text>
+    </g>
+
+    <!-- Mira -->
+    <g stroke="#f4f5fa" stroke-opacity=".8" stroke-width="2">
+      <path d="M800 425v-22M800 475v22M775 450h-22M825 450h22"/>
+      <circle cx="800" cy="450" r="3" fill="#ffb86b" stroke="none"/>
+    </g>
+
+    <g>
+      <rect x="54" y="786" width="310" height="64" rx="8" fill="#04080b" fill-opacity=".7" stroke="#ffffff" stroke-opacity=".12"/>
+      <text x="76" y="812" font-size="11" letter-spacing="2" fill="#767e95">INTEGRIDAD</text>
+      <rect x="76" y="822" width="210" height="7" rx="3" fill="#ffffff" fill-opacity=".1"/>
+      <rect x="76" y="822" width="158" height="7" rx="3" fill="#ff8a6b"/>
+      <text x="330" y="832" font-size="13" fill="#f4f5fa" text-anchor="end">74</text>
+    </g>
+
+    <g text-anchor="end">
+      <rect x="1300" y="770" width="246" height="80" rx="8" fill="#04080b" fill-opacity=".7" stroke="#ffffff" stroke-opacity=".12"/>
+      <text x="1524" y="798" font-size="11" letter-spacing="2" fill="#767e95">RIFLE · CARGADOR</text>
+      <text x="1524" y="832" font-size="34" fill="#f4f5fa">24 <tspan font-size="16" fill="#767e95">/ 96</tspan></text>
+    </g>
+  </g>
+
+  <rect width="1600" height="900" fill="url(#vignette)" pointer-events="none"/>
+  <g opacity=".8">
+    <rect x="1304" y="52" width="242" height="36" rx="18" fill="#ffb86b" fill-opacity=".08" stroke="#ffb86b" stroke-opacity=".35"/>
+    <text x="1425" y="76" fill="#ffb86b" font-family="Consolas, monospace" font-size="12" letter-spacing="2.5" text-anchor="middle">CAPTURA PROVISIONAL</text>
+  </g>
+</svg>

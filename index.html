@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="es" class="no-js">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portafolio personal de desarrollo de videojuegos: proyectos, roles, tecnologías y contacto." />
+  <meta name="theme-color" content="#08090d" />
+  <meta name="color-scheme" content="dark" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Tu Nombre — Portafolio de desarrollo de videojuegos" />
+  <meta property="og:description" content="Proyectos, mecánicas implementadas y tecnologías utilizadas en cada videojuego." />
+  <meta property="og:image" content="assets/images/og-cover.png" />
+  <meta property="og:url" content="" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:image" content="assets/images/og-cover.png" />
+
+  <title>Tu Nombre — Portafolio de desarrollo de videojuegos</title>
+  <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml" />
+
+  <!-- Hojas de estilo ordenadas: base → layout → componentes → animaciones → responsive -->
+  <link rel="stylesheet" href="css/base.css" />
+  <link rel="stylesheet" href="css/layout.css" />
+  <link rel="stylesheet" href="css/components.css" />
+  <link rel="stylesheet" href="css/animations.css" />
+  <link rel="stylesheet" href="css/responsive.css" />
+
+  <script>
+    // Permite ajustar estilos cuando JavaScript está disponible.
+    document.documentElement.classList.replace("no-js", "js");
+    document.documentElement.classList.add("is-ready");
+  </script>
+  <script type="module" src="js/main.js"></script>
+</head>
+
+<body>
+  <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+  <div class="scroll-progress" aria-hidden="true">
+    <span data-scroll-progress></span>
+  </div>
+
+  <!-- Aviso de plantilla: se controla con showDemoBanner en js/config.js -->
+  <div class="demo-banner" data-demo-banner hidden>
+    <div class="container demo-banner-inner">
+      <p>
+        <strong>Plantilla de ejemplo.</strong>
+        El contenido de este sitio es provisional. Edita
+        <code>js/config.js</code> y <code>js/data/</code> para publicar tu información real.
+      </p>
+    </div>
+  </div>
+
+  <header class="site-header" data-header>
+    <div class="container header-inner">
+      <a class="brand" href="#inicio">
+        <span class="brand-mark" data-site="initials" aria-hidden="true">TN</span>
+        <span class="brand-text">
+          <span class="brand-name" data-site="name">Tu Nombre</span>
+          <span class="brand-role" data-site="roleShort">Game Developer</span>
+        </span>
+      </a>
+
+      <nav class="site-nav" id="site-nav" aria-label="Navegación principal" data-nav>
+        <ul class="nav-list" data-nav-list></ul>
+      </nav>
+
+      <div class="header-actions">
+        <a class="btn btn-ghost header-cta" href="#contacto">Contacto</a>
+        <button
+          class="nav-toggle"
+          type="button"
+          data-nav-toggle
+          aria-expanded="false"
+          aria-controls="site-nav"
+          aria-label="Abrir menú"
+        >
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="contenido">
+    <!-- ============================ INICIO ============================ -->
+    <section id="inicio" class="section hero" aria-labelledby="hero-title">
+      <div class="hero-grid-bg" aria-hidden="true"></div>
+      <div class="container hero-inner">
+        <div class="hero-copy" data-reveal>
+          <p class="eyebrow" data-hero="eyebrow">Desarrollo de videojuegos</p>
+
+          <h1 class="hero-title" id="hero-title">
+            <span class="hero-greeting">Hola, soy</span>
+            <span class="hero-name" data-site="name">Tu Nombre</span>
+          </h1>
+
+          <p class="hero-role" data-hero="role">Desarrollador de videojuegos</p>
+          <p class="hero-text" data-hero="description"></p>
+
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="#proyectos">
+              Explorar proyectos
+              <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+                <path d="M5 12h14M13 6l6 6-6 6" />
+              </svg>
+            </a>
+            <a class="btn btn-secondary" href="#contacto">Hablemos</a>
+          </div>
+
+          <div class="hero-tech">
+            <span class="hero-tech-label">Stack habitual</span>
+            <ul class="pill-list" data-hero-tech></ul>
+          </div>
+        </div>
+
+        <div class="hero-visual" data-reveal style="--reveal-delay: 120ms">
+          <div class="hero-art">
+            <div class="hero-art-glow" aria-hidden="true"></div>
+            <img
+              src="assets/images/hero-illustration.svg"
+              alt="Ilustración abstracta de un mando de videojuegos rodeado de formas geométricas"
+              width="760"
+              height="760"
+              fetchpriority="high"
+            />
+            <span class="orbit orbit-1" aria-hidden="true"></span>
+            <span class="orbit orbit-2" aria-hidden="true"></span>
+          </div>
+          <ul class="hero-badges" data-hero-badges aria-label="Tecnologías destacadas"></ul>
+        </div>
+      </div>
+
+      <div class="container hero-foot" data-reveal>
+        <span class="scroll-cue" aria-hidden="true">
+          <span class="scroll-cue-line"></span>
+          Desliza para explorar
+        </span>
+        <p class="hero-note" data-hero="note"></p>
+      </div>
+    </section>
+
+    <!-- =========================== PROYECTOS =========================== -->
+    <section id="proyectos" class="section" aria-labelledby="projects-title">
+      <div class="container">
+        <header class="section-head" data-reveal>
+          <p class="section-index">01 — Proyectos</p>
+          <h2 id="projects-title">Videojuegos en los que he participado</h2>
+          <p class="section-lede">
+            Cada proyecto resume el contexto del juego, mi rol, las mecánicas que implementé y las
+            herramientas utilizadas. Selecciona una tarjeta para ver el detalle completo.
+          </p>
+        </header>
+
+        <div class="filter-panel" data-filter-panel data-reveal>
+          <div class="filter-row">
+            <span class="filter-label" id="filter-engine-label">Motor</span>
+            <div
+              class="chip-group"
+              data-filter="engine"
+              role="group"
+              aria-labelledby="filter-engine-label"
+            ></div>
+          </div>
+
+          <div class="filter-row">
+            <span class="filter-label" id="filter-genre-label">Género</span>
+            <div
+              class="chip-group"
+              data-filter="genre"
+              role="group"
+              aria-labelledby="filter-genre-label"
+            ></div>
+          </div>
+
+          <div class="filter-status">
+            <p class="filter-count" data-result-count aria-live="polite"></p>
+            <button class="filter-reset" type="button" data-filter-reset hidden>
+              Limpiar filtros
+            </button>
+          </div>
+        </div>
+
+        <div class="project-grid" data-project-grid></div>
+
+        <div class="empty-state" data-empty hidden>
+          <span class="empty-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M4 7h16M4 12h10M4 17h7" /></svg>
+          </span>
+          <h3>No hay proyectos con esos filtros</h3>
+          <p>Prueba con otra combinación de motor o género.</p>
+          <button class="btn btn-secondary" type="button" data-empty-reset>Ver todos los proyectos</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- =========================== HABILIDADES =========================== -->
+    <section id="habilidades" class="section" aria-labelledby="skills-title">
+      <div class="container">
+        <header class="section-head section-head-split" data-reveal>
+          <div>
+            <p class="section-index">02 — Habilidades</p>
+            <h2 id="skills-title">Herramientas y conocimientos</h2>
+          </div>
+          <p class="section-lede">
+            Tecnologías con las que trabajo habitualmente. Los niveles son orientativos y se definen
+            en <code class="inline-code">js/data/skills.js</code>.
+          </p>
+        </header>
+
+        <div class="skill-grid" data-skill-grid></div>
+
+        <p class="section-note" data-skills-note hidden>
+          Los niveles mostrados son datos de ejemplo. Sustitúyelos por una valoración real.
+        </p>
+      </div>
+    </section>
+
+    <!-- ============================ SOBRE MÍ ============================ -->
+    <section id="sobre-mi" class="section" aria-labelledby="about-title">
+      <div class="container">
+        <header class="section-head" data-reveal>
+          <p class="section-index">03 — Sobre mí</p>
+          <h2 id="about-title">Perfil y forma de trabajo</h2>
+        </header>
+
+        <div class="about-grid">
+          <div class="about-media" data-reveal>
+            <figure class="portrait">
+              <img
+                src="assets/images/avatar-placeholder.svg"
+                alt="Retrato provisional del desarrollador"
+                width="600"
+                height="700"
+                loading="lazy"
+              />
+              <figcaption class="portrait-tag" data-about="photoLabel">Foto provisional</figcaption>
+            </figure>
+            <div class="about-focus">
+              <p class="about-focus-label">Enfoque</p>
+              <ul class="focus-list" data-about-highlights></ul>
+            </div>
+          </div>
+
+          <div class="about-copy" data-reveal style="--reveal-delay: 100ms">
+            <div class="prose" data-about-body></div>
+
+            <div class="about-interests">
+              <p class="about-interests-label">Intereses</p>
+              <ul class="tag-list" data-about-interests></ul>
+            </div>
+
+            <div class="about-quote" data-about="quote"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================ CONTACTO ============================ -->
+    <section id="contacto" class="section" aria-labelledby="contact-title">
+      <div class="container">
+        <header class="section-head section-head-center" data-reveal>
+          <p class="section-index">04 — Contacto</p>
+          <h2 id="contact-title">Hablemos de videojuegos</h2>
+          <p class="section-lede" data-contact="intro"></p>
+        </header>
+
+        <div class="contact-grid" data-contact-links data-reveal></div>
+
+        <p class="contact-availability" data-contact="availability"></p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <span class="brand-mark brand-mark-sm" data-site="initials" aria-hidden="true">TN</span>
+        <div>
+          <p class="footer-name" data-site="name">Tu Nombre</p>
+          <p class="footer-role" data-site="role">Desarrollador de videojuegos</p>
+        </div>
+      </div>
+
+      <p class="footer-meta" data-footer="meta"></p>
+
+      <a class="footer-top" href="#inicio">
+        Volver arriba
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5M6 11l6-6 6 6" /></svg>
+      </a>
+    </div>
+    <div class="container footer-bottom">
+      <p data-footer="legal"></p>
+      <p data-footer="built"></p>
+    </div>
+  </footer>
+
+  <button class="to-top" type="button" data-to-top aria-label="Volver arriba">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 19V5M6 11l6-6 6 6" /></svg>
+  </button>
+
+  <!-- Vista detallada de proyecto: el contenido se genera desde js/data/projects.js -->
+  <dialog class="project-dialog" data-project-dialog aria-labelledby="project-dialog-title">
+    <div class="dialog-surface" data-dialog-content></div>
+    <button class="dialog-close" type="button" data-dialog-close aria-label="Cerrar detalle del proyecto">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 6l12 12M18 6L6 18" /></svg>
+    </button>
+  </dialog>
+
+  <noscript>
+    <div class="noscript-note">
+      Este portafolio genera su contenido con JavaScript. Actívalo para ver los proyectos, las
+      habilidades y los detalles de cada videojuego.
+    </div>
+  </noscript>
+</body>
+</html>

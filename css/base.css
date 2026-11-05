@@ -1,0 +1,261 @@
+/* ==========================================================================
+   BASE — Variables, reset, tipografía y utilidades globales
+   ========================================================================== */
+
+:root {
+  /* Superficies y texto */
+  --bg: #07080d;
+  --bg-soft: #0b0d14;
+  --surface: #10131c;
+  --surface-2: #151926;
+  --surface-3: #1b2030;
+
+  --text: #f4f5fa;
+  --muted: #a8aec1;
+  --faint: #767e95;
+
+  /* Acentos */
+  --accent: #8b7bff;
+  --accent-2: #a89cff;
+  --accent-soft: rgba(139, 123, 255, 0.14);
+  --teal: #45e0c8;
+  --amber: #ffb86b;
+  --green: #5fd99a;
+  --blue: #58c9ff;
+
+  /* Bordes y radios */
+  --border: rgba(255, 255, 255, 0.08);
+  --border-strong: rgba(255, 255, 255, 0.16);
+  --radius-sm: 10px;
+  --radius: 16px;
+  --radius-lg: 24px;
+  --radius-xl: 32px;
+
+  /* Estructura */
+  --container: 1200px;
+  --gutter: clamp(1.25rem, 4vw, 3rem);
+  --section-space: clamp(4.5rem, 9vw, 8.5rem);
+  --header-h: 72px;
+
+  /* Movimiento y sombras */
+  --ease: cubic-bezier(0.22, 0.68, 0, 1);
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1);
+  --shadow-lg: 0 30px 80px -30px rgba(0, 0, 0, 0.9);
+  --shadow-accent: 0 20px 50px -20px rgba(139, 123, 255, 0.45);
+
+  /* Tipografía */
+  --font-sans: "Segoe UI", system-ui, -apple-system, BlinkMacSystemFont, "Helvetica Neue", Arial,
+    sans-serif;
+  --font-mono: ui-monospace, "Cascadia Code", "SFMono-Regular", Consolas, "Liberation Mono",
+    monospace;
+
+  color-scheme: dark;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
+}
+
+html.dialog-open {
+  overflow: hidden;
+}
+
+body {
+  min-height: 100svh;
+  overflow-x: hidden;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  line-height: 1.65;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+/* Halos de fondo muy suaves, sin interferir con la lectura. */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background:
+    radial-gradient(900px 620px at 88% -8%, rgba(139, 123, 255, 0.16), transparent 62%),
+    radial-gradient(760px 540px at -6% 24%, rgba(69, 224, 200, 0.07), transparent 60%),
+    radial-gradient(700px 520px at 50% 108%, rgba(88, 201, 255, 0.05), transparent 65%);
+}
+
+img,
+svg,
+video,
+iframe {
+  display: block;
+  max-width: 100%;
+}
+
+img {
+  height: auto;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+  background: none;
+  border: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+ul,
+ol {
+  padding: 0;
+  list-style: none;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-weight: 700;
+  line-height: 1.1;
+  letter-spacing: -0.03em;
+  text-wrap: balance;
+}
+
+p {
+  text-wrap: pretty;
+}
+
+code,
+kbd,
+samp {
+  font-family: var(--font-mono);
+  font-size: 0.92em;
+}
+
+::selection {
+  background: var(--accent);
+  color: #0a0a12;
+}
+
+:focus-visible {
+  outline: 2px solid var(--teal);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+.container {
+  width: min(100% - (2 * var(--gutter)), var(--container));
+  margin-inline: auto;
+}
+
+.section {
+  position: relative;
+  padding-block: var(--section-space);
+  scroll-margin-top: calc(var(--header-h) + 24px);
+}
+
+.inline-code {
+  display: inline;
+  padding: 0.1em 0.4em;
+  color: var(--accent-2);
+  background: var(--accent-soft);
+  border: 1px solid rgba(139, 123, 255, 0.2);
+  border-radius: 5px;
+  font-size: 0.86em;
+  white-space: nowrap;
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.skip-link {
+  position: fixed;
+  top: 12px;
+  left: 12px;
+  z-index: 200;
+  padding: 0.7rem 1rem;
+  color: #0a0a12;
+  background: var(--teal);
+  border-radius: var(--radius-sm);
+  font-weight: 700;
+  transform: translateY(-160%);
+  transition: transform 0.25s var(--ease);
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
+
+::selection {
+  background: var(--accent);
+  color: #0a0a12;
+}
+
+/* Scrollbar discreta (navegadores basados en Chromium). */
+::-webkit-scrollbar {
+  width: 11px;
+  height: 11px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--bg);
+}
+
+::-webkit-scrollbar-thumb {
+  background: #262b3b;
+  border: 3px solid var(--bg);
+  border-radius: 99px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #343b50;
+}
+
+.noscript-note {
+  position: fixed;
+  inset-inline: 1rem;
+  bottom: 1rem;
+  z-index: 300;
+  max-width: 46rem;
+  margin-inline: auto;
+  padding: 1rem 1.2rem;
+  color: var(--text);
+  background: var(--surface-2);
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow-lg);
+}
