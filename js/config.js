@@ -80,9 +80,9 @@ export const site = {
 
   contact: {
     intro:
-      "Puedes ver mi código y mis proyectos en GitHub. Los demás canales se irán añadiendo cuando estén disponibles.",
+      "Puedes escribirme por correo o revisar mi código y mis proyectos en GitHub.",
     availability:
-      "GitHub es el canal principal. LinkedIn, itch.io y el correo están pendientes de configurar.",
+      "Respondo por correo y también puedes revisar mis repositorios en GitHub. LinkedIn e itch.io se añadirán cuando estén disponibles.",
     links: [
       {
         id: "github",
@@ -111,10 +111,10 @@ export const site = {
       {
         id: "email",
         label: "Correo",
-        handle: "Por configurar",
-        url: "",
+        handle: "sebasquispeperez@gmail.com",
+        url: "mailto:sebasquispeperez@gmail.com",
         icon: "mail",
-        hint: "Contacto directo (pendiente)",
+        hint: "Contacto directo",
       },
     ],
   },

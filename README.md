@@ -64,7 +64,7 @@ están marcadas como reales (`provisional: false`).
   repositorio o a la demo.
 - **Habilidades:** categorías con barras de nivel orientativas.
 - **Sobre mí:** retrato pendiente, enfoque de trabajo, intereses y objetivo personal.
-- **Contacto:** GitHub configurado; LinkedIn, itch.io y correo quedan como «Pendiente».
+- **Contacto:** GitHub y correo configurados; LinkedIn e itch.io quedan como «Pendiente».
 - **Extras:** navegación fija, scroll suave, sección activa, barra de progreso, botón «volver
   arriba», animaciones de entrada, enlaces directos a proyectos (`#proyecto/<id>`) y pie de página.
 
@@ -409,8 +409,8 @@ Edita `site.contact.links` en `js/config.js`:
 - Iconos disponibles: `github`, `linkedin`, `itch`, `mail`.
 - Puedes añadir o quitar tarjetas; el grid se adapta.
 
-Actualmente solo GitHub está configurado. Para activar LinkedIn, itch.io o el correo, rellena sus
-`url` y cambia `handle` por el dato real.
+Actualmente GitHub y el correo (`mailto:sebasquispeperez@gmail.com`) están configurados. Para activar
+LinkedIn o itch.io, rellena sus `url` y cambia `handle` por el dato real.
 
 ---
 
@@ -602,7 +602,8 @@ Contenido que todavía falta y que **no se ha inventado**:
   del juego en ejecución.
 - **Vídeos:** no hay vídeos publicados; el campo está preparado.
 - **Enlaces jugables:** ninguno de los dos proyectos tiene una demo o descarga pública enlazada.
-- **Redes:** LinkedIn, itch.io y correo están sin configurar y se muestran como «Pendiente».
+- **Redes:** LinkedIn e itch.io están sin configurar y se muestran como «Pendiente». El correo
+  `sebasquispeperez@gmail.com` ya está activo.
 
 Notas sobre los datos:
 

@@ -646,12 +646,10 @@ a.contact-card:hover {
 }
 
 .contact-handle {
-  overflow: hidden;
   color: var(--accent-2);
   font-family: var(--font-mono);
   font-size: 0.66rem;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+  overflow-wrap: anywhere;
 }
 
 .contact-hint {
