@@ -40,18 +40,19 @@ function galleryTemplate(project) {
   return `
     <section class="dialog-section">
       <h3>Galería</h3>
+      ${project.galleryNote ? `<p class="dialog-team">${escapeHtml(project.galleryNote)}</p>` : ""}
       <figure class="gallery-main">
         <img data-gallery-main src="${escapeUrl(first.src)}" alt="${escapeHtml(first.alt)}"
           width="1600" height="900" loading="lazy" />
       </figure>
-      <div class="gallery-thumbs" role="group" aria-label="Capturas del proyecto">
+      <div class="gallery-thumbs" role="group" aria-label="Imágenes del proyecto">
         ${images
           .map(
             (image, index) => `
               <button class="gallery-thumb ${index === 0 ? "is-active" : ""}" type="button"
                 data-gallery-src="${escapeUrl(image.src)}"
                 data-gallery-alt="${escapeHtml(image.alt)}"
-                aria-pressed="${index === 0}" aria-label="Ver captura ${index + 1}">
+                aria-pressed="${index === 0}" aria-label="Ver imagen ${index + 1}">
                 <img src="${escapeUrl(image.src)}" alt="" width="320" height="180" loading="lazy" />
               </button>`
           )
@@ -93,7 +94,7 @@ function actionsTemplate(project) {
     return `
       <div class="dialog-pending">
         <span class="dialog-pending-label">Enlaces pendientes</span>
-        <p>Este proyecto de ejemplo todavía no tiene repositorio ni enlace jugable.</p>
+        <p>Este proyecto todavía no tiene repositorio ni enlace jugable.</p>
       </div>`;
   }
 
@@ -196,7 +197,7 @@ function detailTemplate(project) {
           </ul>
         </div>
 
-        ${project.provisional ? '<p class="dialog-note">Ficha de ejemplo. Sustituye los datos en js/data/projects.js.</p>' : ""}
+        ${project.provisional ? '<p class="dialog-note">Ficha provisional. Completa los datos en js/data/projects.js.</p>' : ""}
       </aside>
     </div>`;
 }
@@ -305,7 +306,7 @@ export function initProjectDialog() {
   window.addEventListener("popstate", syncFromLocation);
   window.addEventListener("hashchange", syncFromLocation);
 
-  // Enlace directo: /#proyecto/nebula-drift
+  // Enlace directo: /#proyecto/<id>
   const initialId = projectIdFromHash();
   if (initialId) {
     if (getProjectById(initialId)) openProject(initialId, { push: false });

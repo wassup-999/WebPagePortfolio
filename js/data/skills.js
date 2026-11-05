@@ -9,8 +9,8 @@
  */
 
 export const skillsMeta = {
-  // true → muestra la nota que recuerda sustituir los niveles de ejemplo.
-  provisional: true,
+  // true → muestra la nota que recuerda que los niveles son orientativos.
+  showNote: true,
 };
 
 export const skillCategories = [
@@ -18,71 +18,44 @@ export const skillCategories = [
     id: "engines",
     icon: "engine",
     title: "Motores de videojuegos",
-    description: "Desarrollo, prototipado e integración de sistemas dentro del motor.",
+    description: "Desarrollo e integración de sistemas dentro del motor.",
     items: [
-      { name: "Unity", level: 85 },
-      { name: "Unreal Engine 5", level: 70 },
-      { name: "Godot", level: 65 },
+      { name: "Unity", level: 82 },
+      { name: "Unreal Engine", level: 32 },
     ],
   },
   {
     id: "languages",
     icon: "code",
     title: "Lenguajes de programación",
-    description: "Programación de gameplay, herramientas y lógica de sistemas.",
+    description: "Programación de gameplay y lógica de sistemas.",
     items: [
       { name: "C#", level: 85 },
-      { name: "C++", level: 70 },
-      { name: "GDScript", level: 65 },
-      { name: "JavaScript", level: 60 },
+      { name: "C++", level: 38 },
     ],
   },
   {
     id: "tools",
     icon: "tools",
-    title: "Herramientas de desarrollo",
-    description: "Control de versiones, creación de contenido y depuración.",
+    title: "Herramientas y tecnologías",
+    description: "Control de versiones, entornos de desarrollo y tecnologías complementarias.",
     items: [
-      { name: "Git / GitHub", level: 80 },
-      { name: "Visual Studio", level: 80 },
-      { name: "Blender", level: 55 },
-      { name: "Aseprite", level: 60 },
+      { name: "Visual Studio", level: 72 },
+      { name: "Git / GitHub", level: 65 },
+      { name: "MySQL", level: 45 },
+      { name: "OpenGL", level: 38 },
     ],
   },
   {
-    id: "design",
+    id: "development",
     icon: "design",
-    title: "Diseño de videojuegos",
-    description: "Mecánicas, niveles y comunicación de la experiencia.",
+    title: "Desarrollo de videojuegos",
+    description: "Sistemas de gameplay y organización del trabajo dentro del proyecto.",
     items: [
-      { name: "Diseño de mecánicas", level: 75 },
-      { name: "Diseño de niveles", level: 70 },
-      { name: "Game feel y feedback", level: 72 },
-      { name: "Documentación de diseño", level: 68 },
-    ],
-  },
-  {
-    id: "production",
-    icon: "layers",
-    title: "Producción y colaboración",
-    description: "Organización del trabajo y comunicación dentro de un equipo.",
-    items: [
-      { name: "Prototipado rápido", level: 78 },
-      { name: "Pruebas y balanceo", level: 70 },
-      { name: "Trello / Notion", level: 65 },
-      { name: "Revisiones de código", level: 68 },
-    ],
-  },
-  {
-    id: "web",
-    icon: "web",
-    title: "Otras tecnologías",
-    description: "Herramientas complementarias para publicar y presentar proyectos.",
-    items: [
-      { name: "HTML5 / CSS3", level: 70 },
-      { name: "Diseño de interfaces", level: 65 },
-      { name: "GitHub Pages", level: 70 },
-      { name: "Accesibilidad web", level: 60 },
+      { name: "Programación de gameplay", level: 75 },
+      { name: "Organización de escenas", level: 70 },
+      { name: "ScriptableObjects", level: 68 },
+      { name: "Interacción y UI", level: 65 },
     ],
   },
 ];

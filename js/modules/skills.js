@@ -49,5 +49,5 @@ export function initSkills() {
   grid.innerHTML = skillCategories.map(categoryTemplate).join("");
 
   const note = qs("[data-skills-note]");
-  if (note) note.hidden = !skillsMeta.provisional;
+  if (note) note.hidden = !skillsMeta.showNote;
 }

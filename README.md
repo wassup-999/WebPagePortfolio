@@ -1,50 +1,74 @@
-# Portafolio de desarrollo de videojuegos
+# Portafolio de videojuegos — Sebaztián Traviz Quispe Perez
 
-Sitio estático, oscuro y responsive para presentar proyectos de desarrollo de videojuegos. Está
-construido únicamente con **HTML5, CSS3 y JavaScript nativo** (módulos ES), sin frameworks, sin
-proceso de compilación y sin backend. Funciona directamente en **GitHub Pages**.
+Portafolio estático, oscuro y responsive para presentar proyectos de desarrollo de videojuegos.
+Está construido únicamente con **HTML5, CSS3 y JavaScript nativo** (módulos ES), sin frameworks,
+sin proceso de compilación y sin backend. Funciona directamente en **GitHub Pages**.
 
-> **Contenido provisional.** Los textos, proyectos, habilidades, imágenes y enlaces incluidos son
-> ejemplos. Antes de publicar, sustituye todo por tu información real y revisa la lista de
-> [personalización](#personalización-antes-de-publicar).
+- **URL de publicación:** <https://wassup-999.github.io/WebPagePortfolio/>
+- **Repositorio:** <https://github.com/wassup-999/WebPagePortfolio>
+- **Autor:** Sebaztián Traviz Quispe Perez (`wassup-999`)
+- **Rol:** programador de videojuegos · Unity · C#
 
 ---
 
 ## Índice
 
-1. [Vista general](#vista-general)
-2. [Estructura del proyecto](#estructura-del-proyecto)
-3. [Vista previa local](#vista-previa-local)
-4. [Personalización antes de publicar](#personalización-antes-de-publicar)
-5. [Añadir o editar proyectos](#añadir-o-editar-proyectos)
-6. [Imágenes, galería y vídeos](#imágenes-galería-y-vídeos)
-7. [Filtros](#filtros)
-8. [Habilidades](#habilidades)
-9. [Contacto y enlaces](#contacto-y-enlaces)
-10. [Colores, tipografía y estilos](#colores-tipografía-y-estilos)
-11. [Añadir secciones o funciones](#añadir-secciones-o-funciones)
-12. [Publicar en GitHub Pages](#publicar-en-github-pages)
-13. [Actualizar el sitio publicado](#actualizar-el-sitio-publicado)
-14. [Accesibilidad y rendimiento](#accesibilidad-y-rendimiento)
-15. [Solución de problemas](#solución-de-problemas)
+1. [Estado actual](#estado-actual)
+2. [Vista general](#vista-general)
+3. [Estructura del proyecto](#estructura-del-proyecto)
+4. [Datos y responsabilidades](#datos-y-responsabilidades)
+5. [Vista previa local](#vista-previa-local)
+6. [Publicar en GitHub Pages](#publicar-en-github-pages)
+7. [Actualizar el sitio publicado](#actualizar-el-sitio-publicado)
+8. [Añadir o editar proyectos](#añadir-o-editar-proyectos)
+9. [Habilidades](#habilidades)
+10. [Contacto y enlaces](#contacto-y-enlaces)
+11. [Imágenes, galería y vídeos](#imágenes-galería-y-vídeos)
+12. [Filtros](#filtros)
+13. [Colores, tipografía y estilos](#colores-tipografía-y-estilos)
+14. [Añadir secciones o funciones](#añadir-secciones-o-funciones)
+15. [Accesibilidad y rendimiento](#accesibilidad-y-rendimiento)
+16. [Contenido pendiente y notas de veracidad](#contenido-pendiente-y-notas-de-veracidad)
+17. [Solución de problemas](#solución-de-problemas)
+18. [Créditos](#créditos)
+
+---
+
+## Estado actual
+
+El sitio ya utiliza los datos reales del autor y los dos proyectos públicos en los que ha
+participado:
+
+| Proyecto | Motor | Género | Año | Enlace |
+| --- | --- | --- | --- | --- |
+| The Angels of the Road | Unity | Plataformas 2D | 2025 | [sowTecsup/TheAngelOfTheRoad](https://github.com/sowTecsup/TheAngelOfTheRoad) |
+| Ecos de Tinta | Unity | Beat 'em up 2.5D | 2026 | [HaxBv/EcosDeTinta](https://github.com/HaxBv/EcosDeTinta) |
+
+> **Sobre el enlace de TheAngelOfTheRoad:** la URL indicada originalmente
+> (`https://github.com/ChemsLGDesu/TheAngelOfTheRoad.git`) devuelve 404. El repositorio público
+> actual es `https://github.com/sowTecsup/TheAngelOfTheRoad`, que es el que se muestra en la ficha.
+> El título visible es **The Angels of the Road**, según el arte oficial del proyecto.
+
+La franja de aviso de plantilla está desactivada (`showDemoBanner: false`). Las fichas de proyecto
+están marcadas como reales (`provisional: false`).
 
 ---
 
 ## Vista general
 
-- **Inicio:** presentación, stack habitual y accesos rápidos.
+- **Inicio:** presentación, objetivo personal, stack habitual y accesos rápidos.
 - **Proyectos:** tarjetas generadas desde datos, filtros por motor y género, contador de resultados
   y estado vacío.
-- **Detalle de proyecto:** descripción completa, rol y responsabilidades, mecánicas, tecnologías,
-  galería con miniaturas, vídeos opcionales y enlaces a repositorio / demo.
+- **Detalle de proyecto:** descripción completa, rol y responsabilidades, mecánicas y sistemas,
+  tecnologías, galería con miniaturas, nota sobre las imágenes, vídeos opcionales y enlace al
+  repositorio o a la demo.
 - **Habilidades:** categorías con barras de nivel orientativas.
-- **Sobre mí:** retrato, enfoque de trabajo, intereses y cita.
-- **Contacto:** tarjetas de GitHub, LinkedIn, itch.io y correo; los enlaces sin configurar se
-  muestran como «Pendiente».
+- **Sobre mí:** retrato pendiente, enfoque de trabajo, intereses y objetivo personal.
+- **Contacto:** GitHub configurado; LinkedIn, itch.io y correo quedan como «Pendiente».
 - **Extras:** navegación fija, scroll suave, sección activa, barra de progreso, botón «volver
   arriba», animaciones de entrada, enlaces directos a proyectos (`#proyecto/<id>`) y pie de página.
 
-La página completa se genera en el navegador a partir de tres fuentes de datos:
+La página se genera en el navegador a partir de tres fuentes de datos:
 
 | Archivo | Contenido |
 | --- | --- |
@@ -57,7 +81,7 @@ La página completa se genera en el navegador a partir de tres fuentes de datos:
 ## Estructura del proyecto
 
 ```text
-WebPagePortolio/
+WebPagePortfolio/
 ├── index.html                     Estructura semántica y puntos de montaje
 ├── README.md                      Esta documentación
 ├── .nojekyll                      Evita el procesado de Jekyll en GitHub Pages
@@ -93,13 +117,14 @@ WebPagePortolio/
         ├── avatar-placeholder.svg
         ├── og-cover.png           Imagen para compartir en redes (1200×630)
         └── projects/
-            ├── nebula-drift/
-            │   ├── cover.svg
-            │   ├── screenshot-01.svg
-            │   └── screenshot-02.svg
-            ├── echoes-of-the-rift/
-            ├── pixel-garden/
-            └── skybound-arena/
+            ├── the-angels-of-the-road/
+            │   ├── cover.webp
+            │   ├── gallery-01.webp
+            │   └── gallery-02.webp
+            └── ecos-de-tinta/
+                ├── cover.webp
+                ├── gallery-01.webp
+                └── gallery-02.webp
 ```
 
 **Responsabilidades y reglas de diseño**
@@ -115,13 +140,29 @@ WebPagePortolio/
 
 ---
 
+## Datos y responsabilidades
+
+- **`js/config.js`**: nombre, iniciales, rol, SEO, navegación, hero, «Sobre mí», contacto y pie.
+- **`js/data/projects.js`**: array `projects`; cada objeto genera una tarjeta, sus filtros y la
+  ficha. `getProjectById()` resuelve los enlaces directos.
+- **`js/data/skills.js`**: `skillCategories` y `skillsMeta.showNote`.
+- **`js/modules/site.js`**: pinta todo lo anterior en el HTML y actualiza metadatos SEO.
+- **`js/modules/projects.js`**: tarjetas, filtros derivados y estado vacío.
+- **`js/modules/project-dialog.js`**: `<dialog>` nativo, galería, historial, foco y hash.
+- **`js/modules/skills.js`**: tarjetas de habilidades y barras de nivel.
+- **`js/modules/nav.js`**: menú móvil, scroll suave, sección activa y progreso.
+- **`js/modules/reveal.js`**: animaciones de entrada con `IntersectionObserver`.
+- **`js/modules/dom.js`** e **`icons.js`**: utilidades y registro de iconos SVG.
+
+---
+
 ## Vista previa local
 
 El sitio usa **módulos ES** (`<script type="module">`). Por seguridad, los navegadores no cargan
 módulos desde `file://`, así que **no abras `index.html` con doble clic**: verás la estructura sin
 el contenido generado.
 
-Usa un servidor HTTP local. Por ejemplo, con Python (incluido en muchos sistemas):
+Usa un servidor HTTP local. Por ejemplo, con Python:
 
 ```powershell
 cd C:\Users\Alumno\Documents\WebPagePortolio
@@ -141,60 +182,100 @@ funcionan con normalidad.
 
 ---
 
-## Personalización antes de publicar
+## Publicar en GitHub Pages
 
-### 1. Datos personales y textos
+El repositorio ya existe: `wassup-999/WebPagePortfolio`. Si partes de otro equipo o de una copia,
+estos son los pasos completos.
 
-Edita `js/config.js`:
+### 1. Revisar el remoto
 
-- `showDemoBanner`: ponlo en `false` cuando el contenido sea real.
-- `name`, `initials`, `role`, `roleShort`: nombre, iniciales y rol.
-- `seo.title`, `seo.description`, `seo.ogImage`: título, descripción e imagen para buscadores y
-  redes sociales.
-- `nav`: orden y etiquetas del menú. Cada `id` debe coincidir con el `id` de una sección de
-  `index.html`.
-- `hero`: subtítulo, descripción, nota, tecnologías y badges flotantes.
-- `about`: párrafos, enfoque, intereses y cita.
-- `contact`: introducción, disponibilidad y enlaces.
-- `footer`: textos del pie. `{year}` y `{name}` se sustituyen automáticamente.
-
-### 2. Imágenes
-
-Sustituye los SVG de ejemplo por tus propias imágenes. Puedes mantener los nombres de archivo para
-no tocar las rutas, o actualizar las rutas en `js/data/projects.js` y `js/config.js`.
-
-- Retrato: `assets/images/avatar-placeholder.svg` (recomendado 600×700).
-- Ilustración del hero: `assets/images/hero-illustration.svg` (cuadrada).
-- Portadas y capturas: `assets/images/projects/<slug>/` (recomendado 1600×900).
-- Imagen social: `assets/images/og-cover.png` (1200×630).
-
-Formatos recomendados: `.webp` o `.jpg` para fotografías y capturas; `.svg` para logotipos e
-ilustraciones vectoriales. Comprime las imágenes antes de subirlas.
-
-### 3. Proyectos y habilidades
-
-Sustituye los cuatro proyectos de ejemplo en `js/data/projects.js` y los niveles de
-`js/data/skills.js`. Cambia `provisional: true` por `false` (o elimina la propiedad) cuando los
-datos sean reales.
-
-### 4. Enlaces
-
-Rellena `links.repo` y `links.play` de cada proyecto, y las `url` de `contact.links`. Los enlaces
-vacíos se muestran como pendientes y no son clicables. Usa URLs absolutas:
-
-```js
-links: {
-  repo: "https://github.com/tu-usuario/tu-repo",
-  play: "https://tu-estudio.itch.io/tu-juego",
-}
+```powershell
+git remote -v
 ```
 
-### 5. Limpieza final
+Debe apuntar a:
 
-- Pon `site.showDemoBanner` en `false`.
-- Revisa que no queden textos «de ejemplo», «provisional» ni «20XX».
-- Comprueba todos los enlaces en una ventana privada.
-- Actualiza este README si cambias la estructura.
+```text
+https://github.com/wassup-999/WebPagePortfolio.git
+```
+
+Si conserva el nombre antiguo con la errata `WebPagePortolio`, corrígelo:
+
+```powershell
+git remote set-url origin https://github.com/wassup-999/WebPagePortfolio.git
+```
+
+> En este equipo `git` no está en el `PATH`. Puedes usar **GitHub Desktop** o invocar la instalación
+> que incluye, por ejemplo:
+> `C:\Users\Alumno\AppData\Local\GitHubDesktop\app-3.6.10\resources\app\git\cmd\git.exe`.
+> La versión puede cambiar; si actualizas GitHub Desktop, localiza de nuevo `git.exe`.
+
+### 2. Subir los archivos
+
+```powershell
+git add .
+git commit -m "Portafolio con proyectos reales"
+git push -u origin main
+```
+
+Si el repositorio ya tenía commits y la rama `main` existe, basta con `git push`.
+
+### 3. Activar GitHub Pages
+
+1. Abre **Settings → Pages** en el repositorio.
+2. En **Build and deployment → Source**, elige **Deploy from a branch**.
+3. Selecciona la rama **main** y la carpeta **/(root)**.
+4. Pulsa **Save**.
+5. Espera uno o dos minutos. La URL aparecerá en la misma página:
+
+   ```text
+   https://wassup-999.github.io/WebPagePortfolio/
+   ```
+
+### 4. Comprobar
+
+- Abre la URL en una ventana privada.
+- Navega a `#proyecto/the-angels-of-the-road` y `#proyecto/ecos-de-tinta`.
+- Comprueba que las imágenes y el favicon cargan (rutas relativas).
+- Revisa la consola del navegador: no debe haber errores 404.
+- Si usas un dominio propio, configúralo en **Settings → Pages → Custom domain** y añade el archivo
+  `CNAME` que GitHub indique.
+
+> El archivo `.nojekyll` ya está incluido para que GitHub Pages no procese el sitio con Jekyll.
+> No lo elimines.
+
+### 5. Si la publicación falla
+
+GitHub Pages ejecuta el flujo **Actions → pages build and deployment**. Si el paso
+**Deploy to GitHub Pages** falla:
+
+1. Abre la pestaña **Actions** del repositorio y entra en la ejecución fallida.
+2. Pulsa **Re-run all jobs**. Los fallos de despliegue suelen ser transitorios.
+3. Comprueba que en **Settings → Pages → Source** está seleccionada la rama `main` y la carpeta
+   `/(root)`.
+4. Espera a que la ejecución termine en verde y recarga la URL con `Ctrl+F5`.
+
+Mientras la última ejecución esté en rojo, GitHub Pages sigue mostrando la publicación anterior
+(o la página por defecto si nunca se publicó correctamente).
+
+---
+
+## Actualizar el sitio publicado
+
+1. Edita `js/config.js`, `js/data/projects.js`, `js/data/skills.js` o los archivos de `assets/`.
+2. Prueba en local con un servidor HTTP.
+3. Publica los cambios:
+
+   ```powershell
+   git add .
+   git commit -m "Actualiza proyectos y datos"
+   git push
+   ```
+
+4. GitHub Pages vuelve a construir el sitio automáticamente. Puede tardar uno o dos minutos.
+5. Si no ves los cambios, fuerza la recarga con `Ctrl+F5` o espera a que caduque la caché.
+
+No es necesario compilar, generar `dist/` ni ejecutar ningún script de build.
 
 ---
 
@@ -232,9 +313,10 @@ Todo el contenido de un proyecto vive en `js/data/projects.js`. Añade un objeto
   cover: "assets/images/projects/mi-juego/cover.webp",
   coverAlt: "Descripción de la portada",
   gallery: [                          // opcional
-    { src: "assets/images/projects/mi-juego/01.webp", alt: "Captura 1" },
-    { src: "assets/images/projects/mi-juego/02.webp", alt: "Captura 2" },
+    { src: "assets/images/projects/mi-juego/01.webp", alt: "Imagen 1" },
+    { src: "assets/images/projects/mi-juego/02.webp", alt: "Imagen 2" },
   ],
+  galleryNote: "Arte oficial del proyecto; no son capturas de gameplay.", // opcional
   videos: [                           // opcional; usa URLs embebibles
     { title: "Gameplay", embedUrl: "https://www.youtube.com/embed/VIDEO_ID" },
   ],
@@ -256,6 +338,7 @@ Todo el contenido de un proyecto vive en `js/data/projects.js`. Añade un objeto
 - `technologies` muestra las cuatro primeras en la tarjeta; el resto aparece como `+N` y en la
   ficha completa.
 - `links.repo` y `links.play` pueden quedar vacíos: la ficha mostrará «Enlaces pendientes».
+- `galleryNote` sirve para aclarar el origen de las imágenes (arte oficial, capturas, renders...).
 - `accent` admite cualquier color HEX válido. Se usa en hover, borde y foco.
 - Para quitar un proyecto, elimina su objeto. Los filtros se recalculan solos.
 - Para reordenar, cambia el orden del array: las tarjetas se numeran en ese orden.
@@ -265,7 +348,7 @@ Todo el contenido de un proyecto vive en `js/data/projects.js`. Añade un objeto
 Cada ficha tiene una URL propia:
 
 ```text
-https://tu-usuario.github.io/tu-repo/#proyecto/mi-juego
+https://wassup-999.github.io/WebPagePortfolio/#proyecto/mi-juego
 ```
 
 Al abrirla se abre el modal correspondiente. El botón Atrás del navegador cierra la ficha y
@@ -273,19 +356,97 @@ restaura el foco en la tarjeta. Si el `id` no existe, la URL se limpia automáti
 
 ---
 
+## Habilidades
+
+Edita `js/data/skills.js`:
+
+```js
+export const skillsMeta = {
+  showNote: true, // muestra la nota de que los niveles son orientativos
+};
+
+export const skillCategories = [
+  {
+    id: "engines",
+    icon: "engine",                  // clave del registro de iconos
+    title: "Motores de videojuegos",
+    description: "Texto breve de la categoría.",
+    items: [
+      { name: "Unity", level: 82 },  // level: 0–100
+      { name: "Unreal Engine", level: 32 },
+    ],
+  },
+];
+```
+
+- `level` se limita a 0–100 y se etiqueta como Básico (<50), Intermedio (50–74) o Avanzado (≥75).
+- `skillsMeta.showNote` controla la nota que recuerda que los niveles son orientativos.
+- Iconos disponibles: `engine`, `code`, `tools`, `design`, `layers`, `web`. Para añadir uno nuevo,
+  registra su SVG en `js/modules/icons.js`.
+- Los niveles son una valoración personal. Ajusta los umbrales en `levelLabel()` si prefieres otra
+  escala.
+
+---
+
+## Contacto y enlaces
+
+Edita `site.contact.links` en `js/config.js`:
+
+```js
+{
+  id: "github",
+  label: "GitHub",
+  handle: "wassup-999",
+  url: "https://github.com/wassup-999",
+  icon: "github",
+  hint: "Código y repositorios",
+}
+```
+
+- `url` vacía → tarjeta no clicable con estado «Pendiente».
+- `mailto:` funciona para el correo: `mailto:tu-correo@ejemplo.com`.
+- Los enlaces `http(s)` se abren en una pestaña nueva con `rel="noopener noreferrer"`.
+- Iconos disponibles: `github`, `linkedin`, `itch`, `mail`.
+- Puedes añadir o quitar tarjetas; el grid se adapta.
+
+Actualmente solo GitHub está configurado. Para activar LinkedIn, itch.io o el correo, rellena sus
+`url` y cambia `handle` por el dato real.
+
+---
+
 ## Imágenes, galería y vídeos
 
-### Portada y capturas
+### Portada e imágenes
 
 - Portada (`cover`): 1600×900 px, formato horizontal 16:9.
-- Capturas (`gallery`): también 16:9; se muestran en la galería y como miniaturas.
+- Galería (`gallery`): también 16:9; se muestran en la galería y como miniaturas.
 - Escribe siempre `alt` descriptivo. No uses «imagen» o «captura» sin contexto.
 - Las imágenes se cargan con `loading="lazy"` salvo la ilustración del hero, que tiene prioridad.
+- Las imágenes actuales de los proyectos son **arte oficial de los repositorios**, adaptado a
+  portada y galería. No son capturas de gameplay. La ficha lo indica con `galleryNote`.
+
+### Sustituir el retrato
+
+El retrato sigue siendo un marcador de posición:
+
+- Archivo actual: `assets/images/avatar-placeholder.svg` (600×700).
+- Sustitúyelo por una fotografía o ilustración propia.
+- Mantén el nombre si no quieres tocar rutas, o actualiza `index.html` y `photoLabel` en
+  `js/config.js`.
+- Cambia `photoLabel` de «Retrato pendiente» al texto que corresponda cuando uses una imagen real.
+
+### Añadir capturas reales
+
+Cuando tengas capturas de gameplay:
+
+1. Guárdalas en `assets/images/projects/<slug>/` en formato `.webp` o `.jpg`.
+2. Añádelas al array `gallery` con un `alt` que describa la escena.
+3. Ajusta o elimina `galleryNote` si todas las imágenes pasan a ser capturas reales.
 
 ### Vídeos
 
-El campo `videos` está preparado pero vacío en los ejemplos. Usa la URL de inserción, no la de la
-página del vídeo:
+El campo `videos` está preparado y vacío en los proyectos actuales. Usa la URL de inserción, no la
+de la página del vídeo:
 
 ```js
 videos: [
@@ -305,14 +466,16 @@ crean al abrir la ficha, por lo que no afectan a la carga inicial.
 
 ### Imagen para redes sociales
 
-`assets/images/og-cover.png` se usa en `og:image` y `twitter:image`. El sitio calcula la URL
-absoluta en tiempo de ejecución. Para que las vistas previas funcionen en todos los rastreadores
-(que pueden no ejecutar JavaScript), tras publicar puedes escribir la URL absoluta directamente en
-`index.html`:
+`assets/images/og-cover.png` se usa en `og:image` y `twitter:image`. En `index.html` ya se indica la
+URL absoluta del sitio publicado:
 
 ```html
-<meta property="og:image" content="https://tu-usuario.github.io/tu-repo/assets/images/og-cover.png" />
+<meta property="og:image" content="https://wassup-999.github.io/WebPagePortfolio/assets/images/og-cover.png" />
 ```
+
+Si cambias de usuario, repositorio o dominio, actualiza también `og:url`, `canonical` y las URLs de
+Twitter en `index.html`. El módulo `site.js` vuelve a calcularlas en tiempo de ejecución para la
+página actual.
 
 ---
 
@@ -327,59 +490,11 @@ Los filtros se generan a partir de los valores únicos de `engine` y `genre`:
 - Para añadir un motor o género nuevo, basta con escribir ese valor en un proyecto.
 
 No hay una lista fija de filtros que mantener. Si en el futuro quieres filtrar por otra propiedad
-(por ejemplo, `year` o `status`), añade una fila en `index.html` con
-`data-filter="year"`, replica la lógica de `buildFilterGroup` y amplía `matchesFilters` en
-`js/modules/projects.js`.
+(por ejemplo, `year` o `status`), añade una fila en `index.html` con `data-filter="year"`, replica
+la lógica de `buildFilterGroup` y amplía `matchesFilters` en `js/modules/projects.js`.
 
----
-
-## Habilidades
-
-Edita `js/data/skills.js`:
-
-```js
-export const skillCategories = [
-  {
-    id: "engines",
-    icon: "engine",                  // clave del registro de iconos
-    title: "Motores de videojuegos",
-    description: "Texto breve de la categoría.",
-    items: [
-      { name: "Unity", level: 85 },  // level: 0–100
-      { name: "Godot", level: 65 },
-    ],
-  },
-];
-```
-
-- `level` se limita a 0–100 y se etiqueta como Básico (<50), Intermedio (50–74) o Avanzado (≥75).
-- `skillsMeta.provisional` controla la nota que avisa de que los niveles son de ejemplo.
-- Iconos disponibles: `engine`, `code`, `tools`, `design`, `layers`, `web`. Para añadir uno nuevo,
-  registra su SVG en `js/modules/icons.js`.
-- Los niveles son orientativos. Ajusta los umbrales en `levelLabel()` si prefieres otra escala.
-
----
-
-## Contacto y enlaces
-
-Edita `site.contact.links` en `js/config.js`:
-
-```js
-{
-  id: "github",
-  label: "GitHub",
-  handle: "tu-usuario",
-  url: "https://github.com/tu-usuario",
-  icon: "github",
-  hint: "Código y repositorios",
-}
-```
-
-- `url` vacía → tarjeta no clicable con estado «Pendiente».
-- `mailto:` funciona para el correo: `mailto:tu-correo@ejemplo.com`.
-- Los enlaces `http(s)` se abren en una pestaña nueva con `rel="noopener noreferrer"`.
-- Iconos disponibles: `github`, `linkedin`, `itch`, `mail`.
-- Puedes añadir o quitar tarjetas; el grid se adapta.
+Con los dos proyectos actuales, el filtro de motor solo muestra «Unity»; el de género muestra
+«Plataformas 2D» y «Beat 'em up 2.5D». Se ampliará automáticamente al añadir proyectos.
 
 ---
 
@@ -454,84 +569,6 @@ que la nueva sección se integra sin cambios adicionales.
 
 ---
 
-## Publicar en GitHub Pages
-
-Requisitos: una cuenta de GitHub y Git instalado. Estos pasos crean un repositorio nuevo y publican
-la rama `main` en la raíz del sitio.
-
-### 1. Crear el repositorio
-
-Crea un repositorio vacío en GitHub (sin README, sin `.gitignore`) llamado, por ejemplo,
-`WebPagePortolio`.
-
-### 2. Subir el proyecto
-
-Desde la carpeta del proyecto:
-
-```powershell
-git init
-git add .
-git commit -m "Portafolio inicial"
-git branch -M main
-git remote add origin https://github.com/TU-USUARIO/TU-REPO.git
-git push -u origin main
-```
-
-Si ya existe un repositorio local, omite `git init` y usa `git remote add` solo si aún no hay
-`origin`.
-
-> **Estado de este repositorio:** ya tiene Git inicializado, la rama `main` y `origin` apuntando a
-> `https://github.com/wassup-999/WebPagePortolio.git`. Los archivos del sitio todavía están sin
-> confirmar. En este equipo `git` no está en el `PATH`, pero GitHub Desktop incluye una instalación
-> utilizable; también puedes hacer el commit y el push desde la interfaz de GitHub Desktop.
-
-### 3. Activar GitHub Pages
-
-1. En GitHub, abre **Settings → Pages**.
-2. En **Build and deployment → Source**, elige **Deploy from a branch**.
-3. Selecciona la rama **main** y la carpeta **/(root)**.
-4. Pulsa **Save**.
-5. Espera uno o dos minutos. La URL aparecerá en la misma página:
-
-   ```text
-   https://TU-USUARIO.github.io/TU-REPO/
-   ```
-
-   Para este repositorio, la URL sería `https://wassup-999.github.io/WebPagePortolio/`.
-
-### 4. Comprobar
-
-- Abre la URL en una ventana privada.
-- Navega a `#proyecto/nebula-drift` o al detalle de cualquier proyecto.
-- Comprueba que las imágenes y el favicon cargan (rutas relativas).
-- Revisa la consola del navegador: no debe haber errores 404.
-- Si usas un dominio propio, configúralo en **Settings → Pages → Custom domain** y añade el archivo
-  `CNAME` que GitHub indique.
-
-> El archivo `.nojekyll` ya está incluido para que GitHub Pages no procese el sitio con Jekyll.
-> No lo elimines.
-
----
-
-## Actualizar el sitio publicado
-
-1. Edita `js/config.js`, `js/data/projects.js`, `js/data/skills.js` o los archivos de `assets/`.
-2. Prueba en local con un servidor HTTP.
-3. Publica los cambios:
-
-   ```powershell
-   git add .
-   git commit -m "Actualiza proyectos y datos"
-   git push
-   ```
-
-4. GitHub Pages vuelve a construir el sitio automáticamente. Puede tardar uno o dos minutos.
-5. Si no ves los cambios, fuerza la recarga con `Ctrl+F5` o espera a que caduque la caché.
-
-No es necesario compilar, generar `dist/` ni ejecutar ningún script de build.
-
----
-
 ## Accesibilidad y rendimiento
 
 El sitio incluye:
@@ -555,12 +592,41 @@ Recomendaciones al personalizar:
 
 ---
 
+## Contenido pendiente y notas de veracidad
+
+Contenido que todavía falta y que **no se ha inventado**:
+
+- **Retrato del autor:** se mantiene el marcador `avatar-placeholder.svg` y la etiqueta «Retrato
+  pendiente».
+- **Capturas de gameplay:** las imágenes actuales son arte oficial de los repositorios, no capturas
+  del juego en ejecución.
+- **Vídeos:** no hay vídeos publicados; el campo está preparado.
+- **Enlaces jugables:** ninguno de los dos proyectos tiene una demo o descarga pública enlazada.
+- **Redes:** LinkedIn, itch.io y correo están sin configurar y se muestran como «Pendiente».
+
+Notas sobre los datos:
+
+- **The Angels of the Road** se apoya en el repositorio `sowTecsup/TheAngelOfTheRoad` y en los
+  commits de `wassup-999` (movimiento y salto, `BoxCastAll`/Raycast, segunda mecánica,
+  ScriptableObjects, `GameManager` y organización de escenas).
+- **Ecos de Tinta** se apoya en `HaxBv/EcosDeTinta`; las aportaciones de `wassup-999` documentadas
+  son el movimiento del jugador, la cámara y la organización de escenas y scripts. Los sistemas de
+  combate, enemigos, habilidades y jefes pertenecen al equipo del proyecto y no se atribuyen al
+  autor de este portafolio.
+- La ortografía del nombre se mantiene tal como la proporcionó el autor: **Sebaztián Traviz Quispe
+  Perez**. Si se desea añadir o quitar tildes, edita `name` en `js/config.js` y el texto visible de
+  `index.html` (los metadatos se regeneran desde `config.js`).
+
+---
+
 ## Solución de problemas
 
 | Síntoma | Causa probable | Solución |
 | --- | --- | --- |
 | La página se ve vacía o sin proyectos al abrirla con doble clic | Los módulos ES no funcionan en `file://` | Usa un servidor HTTP local (ver [Vista previa local](#vista-previa-local)). |
 | Error 404 en GitHub Pages | Pages no está activado o la rama/carpeta no es correcta | Revisa **Settings → Pages** y espera a la publicación. |
+| Sigue apareciendo la página por defecto de Jekyll | Los archivos del sitio aún no están en la rama publicada | Haz commit y push de `index.html` y las carpetas `css/`, `js/` y `assets/`; luego revisa **Settings → Pages**. |
+| El workflow de Pages falla en «Deploy to GitHub Pages» | Fallo transitorio del despliegue | Abre **Actions**, entra en la ejecución y usa **Re-run all jobs** (ver [Publicar en GitHub Pages](#publicar-en-github-pages)). |
 | Las imágenes no cargan tras publicar | Ruta absoluta con `/` o nombre con mayúsculas distinto | Usa rutas relativas y respeta mayúsculas/minúsculas de Linux. |
 | Un proyecto no abre en su enlace directo | `id` duplicado o inexistente | Usa un `id` único y compruébalo en `js/data/projects.js`. |
 | Los filtros no muestran un valor nuevo | El valor está escrito de forma distinta | Usa exactamente el mismo texto en todos los proyectos. |
@@ -571,12 +637,16 @@ Recomendaciones al personalizar:
 
 ---
 
-## Créditos y licencia
+## Créditos
 
-- Diseño y código: plantilla original para este portafolio.
-- Iconos: SVG propios inspirados en formas geométricas y marcas reconocibles.
-- Imágenes: ilustraciones SVG de ejemplo creadas para la plantilla; sustitúyelas por material
-  propio antes de publicar.
+- **Diseño y código:** plantilla original adaptada para este portafolio.
+- **Iconos:** SVG propios inspirados en formas geométricas.
+- **Ilustración del hero y favicon:** recursos SVG creados para el sitio.
+- **Portadas y galerías de proyectos:** arte oficial de los repositorios
+  [`sowTecsup/TheAngelOfTheRoad`](https://github.com/sowTecsup/TheAngelOfTheRoad) y
+  [`HaxBv/EcosDeTinta`](https://github.com/HaxBv/EcosDeTinta), adaptado a 16:9 y etiquetado en la
+  ficha como arte del proyecto. No son capturas de gameplay.
+- **Retrato:** marcador de posición pendiente de sustituir.
 - No se incluyen fuentes, librerías ni recursos de terceros que requieran atribución.
 
 Añade aquí tu licencia preferida (por ejemplo, MIT para el código y «Todos los derechos

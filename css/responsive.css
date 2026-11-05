@@ -434,6 +434,23 @@
   }
 }
 
+/* Nombres largos en pantallas muy estrechas: ajusta marca y separación. */
+@media (max-width: 360px) {
+  .header-inner {
+    gap: 0.5rem;
+  }
+
+  .brand {
+    gap: 0.5rem;
+  }
+
+  .brand-name {
+    font-size: 0.76rem;
+    letter-spacing: -0.02em;
+    white-space: nowrap;
+  }
+}
+
 /* --------------------------------- Print --------------------------------- */
 @media print {
   body::before,

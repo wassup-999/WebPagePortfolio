@@ -8,27 +8,26 @@
  *  Los proyectos viven en  js/data/projects.js
  *  Las habilidades viven en  js/data/skills.js
  *
- *  Los textos marcados como provisionales son contenido de ejemplo:
- *  sustitúyelos por tu información real antes de publicar.
+ *  Los textos marcados como pendientes son los únicos que falta completar.
  * ============================================================================
  */
 
 export const site = {
   /**
-   * true  → muestra la franja superior que avisa de que el contenido es de ejemplo.
-   * false → oculta la franja (hazlo cuando el portafolio tenga tus datos reales).
+   * true  → muestra la franja superior de aviso de plantilla.
+   * false → la oculta (el sitio ya usa datos reales).
    */
-  showDemoBanner: true,
+  showDemoBanner: false,
 
-  name: "Tu Nombre",
-  initials: "", // Si se deja vacío, se calcula a partir de "name".
-  role: "Desarrollador de videojuegos",
-  roleShort: "Game Developer",
+  name: "Sebaztián Traviz Quispe Perez",
+  initials: "ST", // Si se deja vacío, se calcula a partir de "name".
+  role: "Programador de videojuegos",
+  roleShort: "Game Programmer",
 
   seo: {
-    title: "Tu Nombre — Portafolio de desarrollo de videojuegos",
+    title: "Sebaztián Traviz Quispe Perez — Portafolio de videojuegos",
     description:
-      "Portafolio personal de desarrollo de videojuegos: proyectos, roles, mecánicas implementadas, tecnologías y contacto.",
+      "Portafolio de programación de videojuegos: proyectos en Unity con C#, rol, mecánicas implementadas, tecnologías y contacto.",
     ogImage: "assets/images/og-cover.png",
   },
 
@@ -41,80 +40,81 @@ export const site = {
   ],
 
   hero: {
-    eyebrow: "Desarrollo de videojuegos",
-    role: "Diseño y programo experiencias jugables",
+    eyebrow: "Programación de videojuegos",
+    role: "Programador de videojuegos · Unity · C#",
     description:
-      "Me interesa crear videojuegos con mecánicas claras, buen rendimiento y una experiencia cuidada. Aquí reúno los proyectos en los que he participado y lo que aporté en cada uno. Texto de ejemplo: personalízalo con tu propia presentación.",
-    note: "Contenido de ejemplo · Sustituye los textos en js/config.js",
-    tech: ["Unity", "Unreal Engine", "Godot", "C#", "C++"],
+      "Mi objetivo es desarrollar y aprender nuevas técnicas de programación para crear o contribuir en proyectos innovadores y de todo tipo de género. Aquí reúno los videojuegos en los que he participado y explico mi contribución concreta en cada uno.",
+    note: "Unity y C# como base · Repositorios públicos en GitHub",
+    tech: ["Unity", "C#", "C++", "Unreal Engine", "OpenGL", "MySQL"],
     badges: [
       { label: "Unity · C#", tone: "violet" },
-      { label: "Unreal · Blueprints", tone: "amber" },
-      { label: "Godot · GDScript", tone: "teal" },
+      { label: "Unreal Engine · Básico", tone: "amber" },
+      { label: "C++ · OpenGL", tone: "teal" },
     ],
   },
 
   about: {
-    photoLabel: "Foto provisional",
+    photoLabel: "Retrato pendiente",
     paragraphs: [
-      "Soy un desarrollador de videojuegos interesado en crear experiencias claras, divertidas y técnicamente cuidadas. Me gusta trabajar en el punto donde el diseño de mecánicas se encuentra con la programación, cuidando tanto el comportamiento del juego como la sensación que transmite al jugador.",
-      "A lo largo de distintos proyectos he asumido tareas de programación de gameplay, diseño de niveles, interfaces y optimización. Este portafolio recoge esos trabajos y detalla mi contribución concreta en cada uno. Este texto es provisional: sustitúyelo por tu trayectoria real.",
+      "Soy Sebaztián Traviz Quispe Perez, programador de videojuegos. Mi base principal es Unity con C#; también tengo conocimientos básicos de C++ y he utilizado OpenGL y MySQL. Mi objetivo es desarrollar y aprender nuevas técnicas de programación para crear o contribuir en proyectos innovadores y de todo tipo de género.",
+      "En los proyectos en los que he participado me he centrado en programación de gameplay: movimiento y salto, interacción con el entorno, cámara, UI y organización de escenas. En este portafolio documento mi contribución concreta en cada juego, apoyándome en los repositorios públicos y en el historial de commits.",
+      "También tengo nociones básicas de Unreal Engine y sigo ampliando mi formación. Este espacio irá creciendo con nuevos proyectos y materiales, como capturas de gameplay y vídeos.",
     ],
     highlights: [
-      "Programación de mecánicas y sistemas de gameplay",
-      "Prototipado rápido y iteración con el equipo",
-      "Diseño de niveles y experiencia de usuario",
-      "Optimización, herramientas internas y rendimiento",
+      "Programación de gameplay en Unity con C#",
+      "Movimiento, salto y control de cámara",
+      "Interacción con el entorno y UI",
+      "ScriptableObjects y organización de escenas",
     ],
     interests: [
-      "Game feel",
-      "Narrativa interactiva",
-      "Sistemas emergentes",
-      "Multijugador",
-      "Herramientas internas",
-      "Accesibilidad",
+      "Programación de gameplay",
+      "Nuevas técnicas de programación",
+      "Proyectos innovadores",
+      "Distintos géneros",
+      "Unity y C#",
+      "Aprendizaje continuo",
     ],
     quote:
-      "«Un buen juego se entiende en los primeros segundos y se sigue descubriendo horas después.» — Texto de ejemplo.",
+      "«Desarrollar y aprender nuevas técnicas de programación para así lograr crear o contribuir en proyectos innovadores y de todo tipo de género.» — Objetivo personal.",
   },
 
   contact: {
     intro:
-      "¿Tienes un proyecto en marcha, una propuesta o simplemente quieres comentar algo? Puedes encontrarme en las siguientes plataformas. Configura tus enlaces reales en js/config.js.",
+      "Puedes ver mi código y mis proyectos en GitHub. Los demás canales se irán añadiendo cuando estén disponibles.",
     availability:
-      "Los enlaces marcados como «Pendiente» son de ejemplo y se activan al rellenar su URL en js/config.js.",
+      "GitHub es el canal principal. LinkedIn, itch.io y el correo están pendientes de configurar.",
     links: [
       {
         id: "github",
         label: "GitHub",
-        handle: "tu-usuario",
-        url: "", // Ejemplo: "https://github.com/tu-usuario"
+        handle: "wassup-999",
+        url: "https://github.com/wassup-999",
         icon: "github",
         hint: "Código y repositorios",
       },
       {
         id: "linkedin",
         label: "LinkedIn",
-        handle: "tu-perfil",
-        url: "", // Ejemplo: "https://www.linkedin.com/in/tu-perfil"
+        handle: "Por configurar",
+        url: "",
         icon: "linkedin",
-        hint: "Perfil profesional",
+        hint: "Perfil profesional (pendiente)",
       },
       {
         id: "itch",
         label: "itch.io",
-        handle: "tu-estudio",
-        url: "", // Ejemplo: "https://tu-estudio.itch.io"
+        handle: "Por configurar",
+        url: "",
         icon: "itch",
-        hint: "Demos y juegos publicados",
+        hint: "Demos y juegos publicados (pendiente)",
       },
       {
         id: "email",
         label: "Correo",
-        handle: "tu-correo@ejemplo.com",
-        url: "", // Ejemplo: "mailto:tu-correo@ejemplo.com"
+        handle: "Por configurar",
+        url: "",
         icon: "mail",
-        hint: "Contacto directo",
+        hint: "Contacto directo (pendiente)",
       },
     ],
   },
